@@ -1,0 +1,18 @@
+{
+  "SECRET": "CHANGE_THIS",
+  "appleCredentials": {
+    "APPLE_AUTH_KEY_ID": "4ABC_CHANGE_THIS",
+    "TEAM_IDENTIFIER": "AA123_CHANGE_THIS",
+    "PASS_TYPE_IDENTIFIER": "pass.com.myapp.myapp_CHANGE_THIS",
+    "SIGNER_KEY_PASSPHRASE": null
+  },
+  "style": {
+    "organizationName": "MyApp",
+    "logoText": "MyApp Notifications",
+    "description": "MyApp Notifications",
+    "notificationPlaceholder": "Waiting for notifications...",
+    "foregroundColor": "#000000",
+    "labelColor": "#000000",
+    "backgroundColor": "#ffffff"
+  }
+}
