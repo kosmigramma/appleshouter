@@ -2,18 +2,22 @@
 iOS notifications for PWAs and Web apps
 
 Do you have a web app or PWA that uses Web Push Notifications?
+
 You might have figured out that Safari on iOS **STILL** has no support for the Web Push API.
 
 ## So what to do now?
 You might have considered making a web wrapper around your app **just** to get notifications working on iOS.
+
 Not only do you now have an extra codebase to maintain but your app might also not pass the review to get into the App Store.
 
-## There's an alternative workaround
+## Workaround
 For a long time Apple Wallet has provided an API to create passes, be it coupons, boarding passes or event tickets.
+
 The great thing about those is that you don't need to pass a review to create them and you can distribute them as files!
 
 ### But what does that have got to do with Notifications?
 The interesting thing about those passes is that Apple provides a way to send Push Notifications when the passes get updated.
+
 This is done so you can e.g. get notified when your flight gets cancelled/delayed.
 
 ### This allows for a workaround for the above problem. What we want to do is this:
@@ -31,6 +35,7 @@ This is done so you can e.g. get notified when your flight gets cancelled/delaye
 ### Preparation
 What you will need:
 - An Apple Developer Program account
+- NodeJS >= 14
 
 #### Steps
 1. Copy over the default config directory provided in the repo:
@@ -78,7 +83,7 @@ npm install
 npm start
 ```
 Server should be running under port 5000 by default.
-You should run it under a reverse proxy such as Caddy(recommend) or nginx.
+You should run it under a reverse proxy with HTTPS such as Caddy(recommend) or nginx.
 
 6. Usage
 
