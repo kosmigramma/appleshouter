@@ -68,7 +68,8 @@ Also keep the Key ID handy for the next step.
 
 4. The config.json file
 Under data/config.json lies the config file. All the fields below are required.
-```
+```json
+{
   "SECRET": "This should be a random secret string that you choose/generate yourself.",
   "appleCredentials": {
     "APPLE_AUTH_KEY_ID": "The key ID from step 3",
@@ -76,9 +77,10 @@ Under data/config.json lies the config file. All the fields below are required.
     "PASS_TYPE_IDENTIFIER": "The identifier from step 2",
     "SIGNER_KEY_PASSPHRASE": "password for the key generated in step 2, just put null if you didn't choose a password"
   }
+}
 ```
 5. Run the server
-```
+```bash
 npm install
 npm start
 ```
@@ -92,7 +94,7 @@ You will first need to generate a URL using the secret you chose in the settings
 
 This should be called by your backend as we don't want your users to know your precious secret!
 
-```
+```bash
 > curl https://your.host/api/passUrl/SOME_USER_ID  -H 'authorization: Token YOUR_SECRET_TOKEN'
 {"url": "https://your.host/pass/918d8d64cfa50224634e9bb3d4c9f0fbb76005c4aab1239cb834d5f9151684ba0a21db24498cacef4fe7a405336e2.pkpass"}
 ```
@@ -102,7 +104,7 @@ You can then pass the URL returned over to the user pertaining to the USER_ID
 
 Again this should be done by your backend.
 
-```
+```bash
 > curl --header "Content-Type: application/json" --request POST --data '{"text":"hello world"}' https://your.host/api/sendNotification/SOME_USER_ID -H 'authorization: Token YOUR_SECRET_TOKEN'
 {"success":true"}
 ```
