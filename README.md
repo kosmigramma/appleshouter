@@ -44,7 +44,9 @@ cp -R data.example data
 ```
 
 2. Get the Apple Certificates and Pass Type Identifier
+
 You will need to get certificates so you can Generate and sign the passes.
+
 The Passes also need to contain an identifier which you can define in the Apple Dev Console.
 
 We will need two files: signerCert.pem (Certificate) and signerKey.pem (Key)
@@ -54,6 +56,7 @@ Follow the guide here to get those (Note: we don't need the AppleWWDRCA cert as 
 https://github.com/alexandercerutti/passkit-generator/blob/master/non-macOS-steps.md#non-macos-steps
 
 Once you've gotten those two files, place them into the data/certs/ directory.
+
 Also keep that Identifier handy because we will need that later.
 
 **Important!**
@@ -61,9 +64,13 @@ Also keep that Identifier handy because we will need that later.
 they need to be called exactly those filenames: **_signerCert.pem_** and **_SignerKey.pem_** otherwise our script won't find them.
 
 3. Get an iOS APNs Auth Key
+
 You will need to get an Auth key to send Push notifications.
+
 Follow the guide here https://developer.clevertap.com/docs/how-to-create-an-ios-apns-auth-key
+
 Download the key and save it as **_authkey.p8_** under data/certs, again important that the file is called exactly that!
+
 Also keep the Key ID handy for the next step.
 
 4. The config.json file
@@ -85,11 +92,13 @@ npm install
 npm start
 ```
 Server should be running under port 5000 by default.
+
 You should run it under a reverse proxy with HTTPS such as Caddy(recommend) or nginx.
 
 ## Usage
 
 1. Downloading the Pass
+
 You will first need to generate a URL using the secret you chose in the settings.
 
 This should be called by your backend as we don't want your users to know your precious secret!
