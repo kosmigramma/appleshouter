@@ -39,7 +39,7 @@ What you will need:
 
 #### Steps
 1. Copy over the default config directory provided in the repo:
-```
+```bash
 cp -R data.example data
 ```
 
