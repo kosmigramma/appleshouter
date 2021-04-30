@@ -85,7 +85,7 @@ npm start
 Server should be running under port 5000 by default.
 You should run it under a reverse proxy with HTTPS such as Caddy(recommend) or nginx.
 
-6. Usage
+## Usage
 
 1. Downloading the Pass
 You will first need to generate a URL using the secret you chose in the settings.
