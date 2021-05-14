@@ -24,7 +24,7 @@ const SIGNER_KEY_PASSPHRASE =
     config.appleCredentials.SIGNER_KEY_PASSPHRASE || "N/A";
 const AUTH_KEY_PATH = `${DATA_DIR}/certs/authkey.p8`;
 const NOTIFICATION_PLACEHOLDER =
-    config.notificationPlaceholder || "Waiting for notifications...";
+    config.style.notificationPlaceholder || "Waiting for notifications...";
 const PORT = config.PORT || 5000;
 const DB_PATH = `${DATA_DIR}/db.sqlite3`;
 
